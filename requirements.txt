@@ -37,7 +37,6 @@ lxml==4.3.3
 macholib==1.9
 MarkupSafe==1.1.1
 matplotlib==2.2.2
-numpy==1.13.1+mkl
 oauthlib==2.1.0
 opencv-python==3.4.1.15
 pandas==0.23.4
