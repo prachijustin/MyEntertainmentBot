@@ -78,7 +78,7 @@ six==1.11.0
 tornado==4.3
 tweepy==3.7.0
 twilio==6.27.1
-urllib3==1.23
+urllib3==1.24.2
 weather-api==1.0.7
 weather-reporter==1.0.1
 Werkzeug==0.15.4
