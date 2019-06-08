@@ -1,0 +1,13 @@
+
+Item no.: 1 --> Item name = Shawn Mendes
+Evaluating...
+Starting Download...
+Image URL: https://www.mercedes-benz-arena-berlin.de/assets/img/Shawn_Mendes_WS_Main_Teaser_01_35-c263409a32.jpg
+Completed Image ====> 1.Shawn_Mendes_WS_Main_Teaser_01_35-c263409a32.jpg
+Image URL: https://s.abcnews.com/images/GMA/shawn-mendes-file-gty-jef-181126_hpMain_12x5_992.jpg
+Completed Image ====> 2.shawn-mendes-file-gty-jef-181126_hpMain_12x5_992.jpg
+Image URL: https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/shawn-mendes-attends-the-20th-nrj-music-awards-at-palais-news-photo-1060165302-1543257894.jpg?crop=1xw:0.75007xh;center,top&resize=1200:*
+Completed Image ====> 3.shawn-mendes-attends-the-20th-nrj-music-awards-at-palais-news-photo-1060165302-1543257894.jpg
+
+Errors: 0
+
