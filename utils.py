@@ -2,6 +2,9 @@ import os
 from pymongo import MongoClient
 from wiki_to_python import load_wiki
 from python_to_mongodb import load_python
+from bandsintown import get_artist_events
+import json
+from images import get_images
 
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "client-secret.json"
@@ -21,6 +24,12 @@ event_record = db.EventsData
 
 
 #print(artist_record.count_documents({}))
+
+def ShowArtistPicture(parameters):
+    name = parameters('music-artist')
+    pic = parameters('pictures')
+    return name
+
 
 def ShowArtist(parameters):
     name = parameters.get('music-artist')
@@ -54,34 +63,51 @@ def fetch_reply(message, session_id):
             print('name........', name)
             load_python(name)
             print('done......')
-            records = ShowArtist(dict(response.parameters))
-            records = str(records)
-
-        final_record = 'showing record: ' + records    
+        records = ShowArtist(dict(response.parameters))
+            #records = str(records)
+        print(type(records))
+        print(records)
+        arec = ''
+        arec += 'Name: {}\nBiography: {}\nPic: {}'.format(records['name'],records['bio'],records['pics'])
+        final_record = 'showing record: \n' + arec
         return final_record
 
         
     elif response.intent.display_name == 'ShowEvents':
         records = ShowArtistEvents(dict(response.parameters))
-        print(type(records))
+        print('bhb  ',records)
+        artist = response.parameters['music-artist']
+        print(records.count())
+        if records.count() == 0:
+            get_artist_events(artist)
+            print('done......')
+        records = ShowArtistEvents(dict(response.parameters))
         #records = str(records)
         #return records
         #erecord = {item[0]:item for item in records}
-        #print(type(erecord))
-        event_record = 'Showing events of ' 
+        print(records)
+        event_record = ''
         # for i in range(0,3):
         #     print(records[i])
         for row in records: 
-            event_record += row['artist'] + ' :'
+            #print(row)
+            print('-----------')
             event_record += '\n\nVenue: {}\nCountry: {}\nDate: {}\nTicket URL: {}'.format(row['venue'], row['country'], row['date'], row['tix_url'])
             #event_record = 'Venue: ' + row['venue'] + 'Country: ' + row['country'] + 'Date: ' + row['date'] + ' Ticket URL: ' + row['tix_url']
-        print(event_record)
+        print('events....',event_record)
             #frecords += event_record
             #event_record += '\n\n{}'.format(row['id'])
-        return event_record
+        erecord = 'Showing upcoming events of {}: '.format(artist) + event_record
+        return erecord
 
-    if response.intent.display_name == 'ShowNews':
-        return 'ok i will show u news *{}*'.format(dict(response.parameters))
+    if response.intent.display_name == 'ShowArtistPicture':
+        #record = ShowArtistPicture(dict(response.parameters))
+        artist = response.parameters['music-artist']
+        urls = get_images(artist, 3)
+        print(urls)
+        print(type(urls))
+        pic_url = '\n\n'.join(urls)
+        return 'Pics: {}\n'.format(pic_url)
     else:
         return response.fulfillment_text
 

@@ -1,0 +1,9 @@
+
+Item no.: 1 --> Item name = Maroon 5
+Evaluating...
+Starting Download...
+Image URL: https://completemusicupdate.com/wp-content/uploads/2016/05/maroon51250.jpg
+Completed Image ====> 1.maroon51250.jpg
+
+Errors: 0
+
