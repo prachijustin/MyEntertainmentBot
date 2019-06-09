@@ -8,7 +8,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-	return 'Hello world'
+    str_msg = '<h3>Welcome to Entertainment chatbot.</h3> <h4>For using the chatbot, send <b>Join circle-was</b> to <b>+1 415-523-8886</b> by using your WhatsApp</h4>'
+    return str_msg
 
 
 @app.route('/sms', methods=['POST'])
