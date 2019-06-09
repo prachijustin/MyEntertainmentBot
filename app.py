@@ -6,9 +6,12 @@ from utils import fetch_reply
 app = Flask(__name__)
 
 
+@app.route("/")
+def index():
+	return render_template("index.html")
 
 
-@app.route('/', methods=['POST'])
+@app.route('/sms', methods=['POST'])
 def sms_reply():
     message = request.form.get('Body')
     sender = request.form.get('From')
