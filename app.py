@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
 
 from utils import fetch_reply
@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-	return render_template("index.html")
+	return 'Hello world'
 
 
 @app.route('/sms', methods=['POST'])
