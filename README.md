@@ -1,5 +1,7 @@
 # MyEntertainmentBot
 
+<h3>Assignment purpose</h3>
+
 This is a WhatsApp Bot made for your Entertainment purpose.
 You can search for any music-artist in this bot.
 Eg. "Who is Justin Bieber?"
