@@ -20,10 +20,13 @@ def sms_reply():
     response = MessagingResponse()
 
     x,y = fetch_reply(message, sender)
-    urls = y.split('\n')
-    print(urls)
-    for index in range(0, len(urls)):
-        response.message('{}'.format(x)).media(urls[index])
+    if y!= '':
+        urls = y.split('\n')
+        print(urls)
+        for index in range(0, len(urls)):
+            response.message('{}'.format(x)).media(urls[index])
+    else:
+        response.message(x)
     #print(str(response))
     return str(response)
 

@@ -77,7 +77,7 @@ def fetch_reply(message, session_id):
         urls = ShowArtistPicture(dict(response.parameters)) 
         pic_url = '\n'.join(urls)
        
-        return 'Pics: ', pic_url   
+        return 'Pics: ', pic_url
 
     elif response.intent.display_name == 'ShowEvents':
         records = ShowArtistEvents(dict(response.parameters))
@@ -108,5 +108,5 @@ def fetch_reply(message, session_id):
 
     
     else:
-        return response.fulfillment_text
+        return response.fulfillment_text,''
 
