@@ -108,5 +108,5 @@ def fetch_reply(message, session_id):
 
     
     else:
-        return response.fulfillment_text
+        return response.fulfillment_text,''
 
