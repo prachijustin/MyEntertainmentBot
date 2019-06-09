@@ -5,10 +5,13 @@ from utils import fetch_reply
 
 app = Flask(__name__)
 
+@app.route("/")
+def index():
+    str_msg = '<h3>Welcome to Entertainment chatbot.</h3> <h4>For using the chatbot, send <b>Join circle-was</b> to <b>+1 415-523-8886</b> by using your WhatsApp</h4>'
+    return str_msg
 
 
-
-@app.route('/', methods=['POST'])
+@app.route('/msg', methods=['POST'])
 def sms_reply():
     message = request.form.get('Body')
     sender = request.form.get('From')
