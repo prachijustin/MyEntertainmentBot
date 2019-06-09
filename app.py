@@ -19,11 +19,13 @@ def sms_reply():
     response = MessagingResponse()
 
     x,y = fetch_reply(message, sender)
-    urls = y.split('\n')
-    print(urls)
-    for index in range(0, len(urls)):
-        response.message('{}'.format(x)).media(urls[index])
-    #print(str(response))
+    if y!= '':
+        urls = y.split('\n')
+        print(urls)
+        for index in range(0, len(urls)):
+            response.message('{}'.format(x)).media(urls[index])
+    else:
+        response.message(x)
     return str(response)
 
 if __name__ == '__main__':
