@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import bandsintown
 import requests
 import json
@@ -50,6 +51,8 @@ def get_artist_events(artist):
    
     print('succes')
 =======
+=======
+>>>>>>> origin/master
 import bandsintown
 import requests
 import json
@@ -100,5 +103,8 @@ def get_artist_events(artist):
     
    
     print('succes')
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 #get_artist_events('maroon 5')

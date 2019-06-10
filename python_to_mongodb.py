@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import requests
 from pymongo import MongoClient
 from wiki_to_python import load_wiki
@@ -25,6 +26,8 @@ def load_python(artist):
     print('successfull')
 
 =======
+=======
+>>>>>>> origin/master
 import requests
 from pymongo import MongoClient
 from wiki_to_python import load_wiki
@@ -33,6 +36,10 @@ from images import get_images
 client = MongoClient('mongodb+srv://Prachi:sharma@cluster0-sbg8n.mongodb.net/test?retryWrites=true&w=majority')
 db = client.get_database('EntertainmentDB')
 artist_record = db.ArtistData
+<<<<<<< HEAD
+=======
+x =db.Books
+>>>>>>> origin/master
 
 
 def load_python(artist):
@@ -49,4 +56,7 @@ def load_python(artist):
     artist_record.insert_one(artist_dict)
     print('successfull')
 
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 from google_images_download import google_images_download  
 import sys
 
@@ -39,6 +40,8 @@ def get_images(query, limit):
         print('not found.....')
 
 =======
+=======
+>>>>>>> origin/master
 from google_images_download import google_images_download  
 import sys
 
@@ -78,4 +81,7 @@ def get_images(query, limit):
     except FileNotFoundError:  
         print('not found.....')
 
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master

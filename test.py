@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import bandsintown
 import requests
 import json
@@ -17,6 +18,8 @@ new_dict = {item['id']:item for item in data}
 
 print(len(new_dict))
 =======
+=======
+>>>>>>> origin/master
 import bandsintown
 import requests
 import json
@@ -34,4 +37,7 @@ data = json.loads(data)
 new_dict = {item['id']:item for item in data}
 
 print(len(new_dict))
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master

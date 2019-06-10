@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 from flask import Flask, render_template, request
 from wikipedia import * 
 from url_shortner import shorten
@@ -25,6 +26,8 @@ def load_wiki(artist=''):
 
 
 =======
+=======
+>>>>>>> origin/master
 from flask import Flask, render_template, request
 from wikipedia import * 
 from url_shortner import shorten
@@ -50,4 +53,7 @@ def load_wiki(artist=''):
 
 
 
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master

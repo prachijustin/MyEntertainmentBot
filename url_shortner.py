@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import pyshorteners
 from pyshorteners import Shorteners
 
@@ -9,6 +10,8 @@ def shorten(url):
 
 
 =======
+=======
+>>>>>>> origin/master
 import pyshorteners
 from pyshorteners import Shorteners
 
@@ -18,4 +21,7 @@ def shorten(url):
     return shorturl
 
 
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master

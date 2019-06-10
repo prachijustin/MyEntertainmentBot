@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import os
 from pymongo import MongoClient
 from wiki_to_python import load_wiki
@@ -112,6 +113,8 @@ def fetch_reply(message, session_id):
         return response.fulfillment_text,''
 
 =======
+=======
+>>>>>>> origin/master
 import os
 from pymongo import MongoClient
 from wiki_to_python import load_wiki
@@ -119,6 +122,10 @@ from python_to_mongodb import load_python
 from bandsintown import get_artist_events
 import json
 from images import get_images
+<<<<<<< HEAD
+=======
+import requests
+>>>>>>> origin/master
 
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "client-secret.json"
@@ -140,9 +147,15 @@ event_record = db.EventsData
 #print(artist_record.count_documents({}))
 
 def ShowArtistPicture(parameters):
+<<<<<<< HEAD
     name = parameters('music-artist')
     pic = parameters('pictures')
     return name
+=======
+    artist = parameters.get('music-artist')
+    urls = get_images(artist, 3)
+    return urls
+>>>>>>> origin/master
 
 
 def ShowArtist(parameters):
@@ -182,11 +195,24 @@ def fetch_reply(message, session_id):
         print(type(records))
         print(records)
         arec = ''
+<<<<<<< HEAD
         arec += 'Name: {}\nBiography: {}\nPic: {}'.format(records['name'],records['bio'],records['pics'])
         final_record = 'showing record: \n' + arec
         return final_record
 
         
+=======
+        arec += 'Name: {}\nBiography: {}\nPic: {}'.format(records['name'],records['bio'], records['pics'])
+        final_record = 'Showing the record: \n' + arec
+        return final_record, records['pics']
+
+    elif response.intent.display_name == 'ShowArtistPicture':
+        urls = ShowArtistPicture(dict(response.parameters)) 
+        pic_url = '\n'.join(urls)
+       
+        return 'Pics: ', pic_url   
+
+>>>>>>> origin/master
     elif response.intent.display_name == 'ShowEvents':
         records = ShowArtistEvents(dict(response.parameters))
         print('bhb  ',records)
@@ -212,6 +238,7 @@ def fetch_reply(message, session_id):
             #frecords += event_record
             #event_record += '\n\n{}'.format(row['id'])
         erecord = 'Showing upcoming events of {}: '.format(artist) + event_record
+<<<<<<< HEAD
         return erecord
 
     if response.intent.display_name == 'ShowArtistPicture':
@@ -224,5 +251,13 @@ def fetch_reply(message, session_id):
         return 'Pics: {}\n'.format(pic_url)
     else:
         return response.fulfillment_text
+
+>>>>>>> origin/master
+=======
+        return erecord,''
+
+    
+    else:
+        return response.fulfillment_text,''
 
 >>>>>>> origin/master

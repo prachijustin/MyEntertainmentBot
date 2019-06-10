@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 enter_env/
 *.pyc
 =======
 enter_env/
 *.pyc
 client-secret.json
+>>>>>>> origin/master
+=======
+enter_env/
+*.pyc
 >>>>>>> origin/master

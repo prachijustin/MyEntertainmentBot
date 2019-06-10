@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ticketpy
 
 tm_client = ticketpy.ApiClient('TB4mGiWrYIGhlnSZntuCOcARexeMzGem')
@@ -48,6 +49,8 @@ for v in venues:
 # print('esgwh')
 # for event in pages:
 =======
+=======
+>>>>>>> origin/master
 import ticketpy
 
 tm_client = ticketpy.ApiClient('TB4mGiWrYIGhlnSZntuCOcARexeMzGem')
@@ -96,5 +99,8 @@ for v in venues:
 
 # print('esgwh')
 # for event in pages:
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 #     print(event)
