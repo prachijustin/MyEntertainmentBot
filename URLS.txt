@@ -1,13 +1,13 @@
 
-Item no.: 1 --> Item name = Maroon 5
+Item no.: 1 --> Item name = Justin Bieber
 Evaluating...
 Starting Download...
-Image URL: https://completemusicupdate.com/wp-content/uploads/2016/05/maroon51250.jpg
-Completed Image ====> 1.maroon51250.jpg
-Image URL: https://media.pitchfork.com/photos/5c5085d5a8b1520c39cc9eaa/2:1/w_790/Maroon-5.jpg
-Completed Image ====> 2.Maroon-5.jpg
-Image URL: https://asialive365.com/wp-content/uploads/2018/09/c-maroon5-update.jpg
-Completed Image ====> 3.c-maroon5-update.jpg
+Image URL: https://i0.heartyhosting.com/okmagazine.com/wp-content/uploads/2019/01/Justin-Bieber-Hailey-Baldwin-Mom-PP.jpg?resize=780%2C390&ssl=1
+Completed Image ====> 1.Justin-Bieber-Hailey-Baldwin-Mom-PP.jpg
+Image URL: https://s.abcnews.com/images/Entertainment/GTY_justin_bieber_jt_160508_12x5_992.jpg
+Completed Image ====> 2.GTY_justin_bieber_jt_160508_12x5_992.jpg
+Image URL: http://cdn.24.co.za/files/Cms/General/d/8968/424fb94a4674487e988e3bce0932dd9a.jpg
+Completed Image ====> 3.424fb94a4674487e988e3bce0932dd9a.jpg
 
 Errors: 0
 
