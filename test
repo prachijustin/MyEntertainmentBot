@@ -1,0 +1,17 @@
+events = ShowEvents(dict(response.parameters))
+        if events == 'attractions':
+            attractions = tm_client.attractions.find(keyword="Yankees").one()
+            attract_str = 'Here is the list of attractions: '
+            for attr in attractions:
+                attract_str += attr.name
+            return attract_str
+        elif events == 'events':
+            venues = tm_client.venues.find(keyword="India").all()
+            event_str = 'Here is the list of events: '
+            for v in venues:
+                event_str += '\n\nName: {} \nCity: {}'.format(v.name, v.city)   
+            return event_str
+
+
+            
+tm_client = ticketpy.ApiClient('TB4mGiWrYIGhlnSZntuCOcARexeMzGem')
